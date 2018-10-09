@@ -28,6 +28,6 @@ This will allow for optimal scalability and elasticity
 The internet facing classic ELB will be configured with the listener configuration as HTTP over port 80 with both public subnets in the VPC selected.  The ELB will also have the default configurations of a new security group, TCP rule over port 80 with the source open to the world. Since this is practice with ELB and auto scaling a page will not be set up, so the health check's ping protocol will need to be configured over TCP and not HTTP.
 
 
-## ELB
+## Testing
 
 Using the ELB DNS name found in the ELB description you can simply copy and paste the link in a new tab. This will launch the default apache test page, assuring the ELB is pointing the traffic to one of the EC2 instances in the auto scaling group. Since there is no data to change CPU levels of the instances, the best thing to do is to manually terminate an instance to see if the auto scaling group provisions a new instance after the length of its health checks.
